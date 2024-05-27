@@ -1,0 +1,90 @@
+$colorRosado: #FDD3EB;
+$colorBeige: #F8F1E2;
+$colorVerde: #CBDDCE;
+$colorAnaranjado: #FFB672;
+$colorVerdeOscuro: #5F996B;
+$fuente-BODY_GROTESQUE:'Body Grotesque Trial', sans-serif;
+$fuent-POPPINS: "Poppins", sans-serif;
+$fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    padding: 0 1vw;
+
+    #logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1vw;
+        img{
+            width: 3vw;
+            height: 3vw;
+        }
+        h1{
+            font-size: 2vw;
+            font-family: $fuente-BODY_GROTESQUE;
+        }
+    }
+    #menuOpciones{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 2vw;
+        align-items: center;
+        p{
+            font-family: $fuente-BODY_GROTESQUE;
+        }
+    }
+}
+
+#previaPrincipal{
+    background-color: $colorBeige;
+    .slogan{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: $colorVerdeOscuro;
+            text-align: center;
+            font-family: 'Body Grotesque Large Trial', sans-serif;
+            #palabraVegano{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+#previaRecetario{
+    background-color: $colorVerde;
+    .subtituloRecetario{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 2vw;
+        h2{
+            margin: 0;
+        }
+    }
+    .tresCartasRecetasPrevia{
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
+        padding: 2vw;
+        .cartaPreviaReceta{
+            background-color: white;
+            padding: 1.5vw;
+            img{
+                width: 30vw;
+            }
+        }
+    }
+}
