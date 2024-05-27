@@ -11,11 +11,11 @@ $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
         .barraAfuera{
             border: solid black 1px;
             width: 50%;
-            height: 15px;
+            height: 20px;
             .barraDentro{
                 width: $width;
-                height: 15px; 
-                background-color: #5F996B;
+                height: 20px; 
+                background-color: $colorVerde;
             }
         }
 }
@@ -83,10 +83,28 @@ header{
     .subtituloRecetario{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
         padding: 0 2vw;
+        padding: 2vw;
         h2{
             margin: 0;
+            font-family: $fuente-LEAGUE_SPARTAN;
+            font-size: 5vw;
+        }
+        button{
+            border: none;
+            background: white;
+            border-radius: 30px;
+            width: 70%;
+            font-size: 2vw;
+            height: 4vw;
+        }
+        @media (max-width: 600px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1vw;
         }
     }
     .tresCartasRecetasPrevia{
@@ -94,24 +112,78 @@ header{
         flex-direction: row;
         gap: 3vw;
         padding: 2vw;
+        justify-content: center;
+        align-items: center;
         .cartaPreviaReceta{
             background-color: white;
-            padding: 1.5vw;
-            img{
-                width: 30vw;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            width: 25vw;
+            .nombreRecetaIndex {
+                background-color: $colorVerde;
+                text-align: center;
+                width: 90%;
+                margin: 1vw;
+                border-radius: 25px;
+                height: 3vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                text-transform: uppercase;
+                font-family: $fuent-POPPINS;
+                font-weight: 500;
+                font-size: 1vw;
+                }
+            }
+            .imagenRecetaIndex{
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 23vw;
+                    height: 13vw;
+                }
+            }
+            .botonCartaRecetaIndex {
+                padding: 2vw 0 2vw 0;
+                display: flex;
+                justify-content: center;
+                button{
+                    border: none;
+                    background: $colorVerde;
+                    border-radius: 25px;
+                    width: 70%;
+                    font-size: 1.5vw;
+                    height: 2.5vw;
+                    font-family: $fuent-POPPINS;
+                }
             }
             .informacionRecetas{
+                padding: 0 1vw;
                 .categoriaReceta{
                     display: flex;
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
-
+                    p{
+                        font-family: $fuent-POPPINS;
+                    }
                 }
-                
+                .CategoriaReceta_texto {
+                    width: 50%;
+                    p{
+                        border: solid black 1px;
+                        background-color: $colorVerde;
+                        height: 20px;
+                        text-align: center;
+                        border-radius: 25px;
+                        font-family: $fuent-POPPINS;
+                    }
+                }
             }
         }
-
+        //PORCNTAJE 1ERA TARJETA
         $porcentajes1: 25%, 50%, 75%, 10%;
         .cartaPreviaReceta:nth-child(1){
             .categoriaReceta{
@@ -122,7 +194,7 @@ header{
                 }
             }
         }
-
+        //PORCNTAJE 2DA TARJETA
         $porcentajes2: 60%, 40%, 75%, 50%;
         .cartaPreviaReceta:nth-child(2){
             .categoriaReceta{
@@ -133,7 +205,7 @@ header{
                 }
             }
         }
-
+        //PORCNTAJE 3ERA TARJETA
         $porcentajes3: 60%, 20%, 20%, 50%;
         .cartaPreviaReceta:nth-child(3){
             .categoriaReceta{
@@ -148,6 +220,9 @@ header{
         @media (max-width: 800px) {
             display: flex;
             flex-direction: column;
+            .informacionRecetas{
+                display: none;
+            }
         }
     }
 }
