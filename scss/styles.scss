@@ -7,6 +7,20 @@ $fuente-BODY_GROTESQUE:'Body Grotesque Trial', sans-serif;
 $fuent-POPPINS: "Poppins", sans-serif;
 $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
 
+@mixin barra_porcentaje($width) {
+        .barraAfuera{
+            border: solid black 1px;
+            width: 50%;
+            height: 15px;
+            .barraDentro{
+                width: $width;
+                height: 15px; 
+                background-color: #5F996B;
+            }
+        }
+}
+
+
 body{
     margin: 0;
     padding: 0;
@@ -19,6 +33,7 @@ header{
     align-items: center;
     margin-top: 0;
     padding: 0 1vw;
+    width: 100%;
 
     #logo{
         display: flex;
@@ -85,6 +100,54 @@ header{
             img{
                 width: 30vw;
             }
+            .informacionRecetas{
+                .categoriaReceta{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+
+                }
+                
+            }
+        }
+
+        $porcentajes1: 25%, 50%, 75%, 10%;
+        .cartaPreviaReceta:nth-child(1){
+            .categoriaReceta{
+                @for $i from 1 through length($porcentajes1) {
+                    &:nth-child(#{$i}) {
+                        @include barra_porcentaje(nth($porcentajes1, $i));
+                    }
+                }
+            }
+        }
+
+        $porcentajes2: 60%, 40%, 75%, 50%;
+        .cartaPreviaReceta:nth-child(2){
+            .categoriaReceta{
+                @for $i from 1 through length($porcentajes2) {
+                    &:nth-child(#{$i}) {
+                        @include barra_porcentaje(nth($porcentajes2, $i));
+                    }
+                }
+            }
+        }
+
+        $porcentajes3: 60%, 20%, 20%, 50%;
+        .cartaPreviaReceta:nth-child(3){
+            .categoriaReceta{
+                @for $i from 1 through length($porcentajes3) {
+                    &:nth-child(#{$i}) {
+                        @include barra_porcentaje(nth($porcentajes3, $i));
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 800px) {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
