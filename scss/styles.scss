@@ -3,7 +3,6 @@ $colorBeige: #F8F1E2;
 $colorVerde: #CBDDCE;
 $colorAnaranjado: #FFB672;
 $colorVerdeOscuro: #5F996B;
-$fuente-BODY_GROTESQUE:'Body Grotesque Trial', sans-serif;
 $fuent-POPPINS: "Poppins", sans-serif;
 $fuente-LEAGUE_SPARTAN: "League Spartan", sans-serif;
 
@@ -33,7 +32,6 @@ header{
     align-items: center;
     margin-top: 0;
     padding: 0 1vw;
-    width: 100%;
 
     #logo{
         display: flex;
@@ -41,12 +39,12 @@ header{
         align-items: center;
         gap: 1vw;
         img{
-            width: 3vw;
-            height: 3vw;
+            width: 2vw;
+            height: 2vw;
         }
         h1{
-            font-size: 2vw;
-            font-family: $fuente-BODY_GROTESQUE;
+            font-size: 1.5vw;
+            font-family: $fuent-POPPINS;
         }
     }
     #menuOpciones{
@@ -55,24 +53,54 @@ header{
         justify-content: space-around;
         gap: 2vw;
         align-items: center;
+        font-size: 1vw;
         p{
-            font-family: $fuente-BODY_GROTESQUE;
+            font-family: $fuent-POPPINS;
+        }
+    }
+    @media (max-width: 768px) {
+        #logo{
+            gap: 1vw;
+            img{
+                width: 3vw;
+                height: 3vw;
+            }
+            h1{
+                font-size: 2.5vw;
+            }
+        }
+        #menuOpciones{
+            gap: 2vw;
+            font-size: 2vw;
         }
     }
 }
 
 #previaPrincipal{
-    background-color: $colorBeige;
+    background-image: url("../assets/Vegan\ Web.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 27vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .slogan{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         h1{
             color: $colorVerdeOscuro;
             text-align: center;
-            font-family: 'Body Grotesque Large Trial', sans-serif;
+            font-family: $fuent-POPPINS;
+            font-weight: 400;
+            font-size: 3vw;
             #palabraVegano{
                 text-transform: uppercase;
+                font-weight: 600;
+            }
+            #palabraUruguay{
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 4vw;
             }
         }
     }
@@ -183,6 +211,12 @@ header{
                 }
             }
         }
+        @media (max-width: 1024px) {
+            gap: 4vw;
+            .cartaPreviaReceta{
+                width: 30vw;
+            }
+        }
         //PORCNTAJE 1ERA TARJETA
         $porcentajes1: 25%, 50%, 75%, 10%;
         .cartaPreviaReceta:nth-child(1){
@@ -216,7 +250,6 @@ header{
                 }
             }
         }
-
         @media (max-width: 800px) {
             display: flex;
             flex-direction: column;
