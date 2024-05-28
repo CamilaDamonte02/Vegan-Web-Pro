@@ -401,4 +401,56 @@ header{
             border-radius: 50%;
         }
     }
+    .productosIndex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 2vw;
+        .cartaProductoIndex{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: black 1px solid;
+            padding: 1vw;
+            .imagenProductoIndex img{
+            width: 15vw;
+            height: auto;
+            margin-bottom: 1.5vw;
+            }
+            .nombreProductoIndex {
+                font-family: $fuent-POPPINS;
+                padding: 0;
+                p{
+                    margin: 0;
+                    padding: 0 0.5vw;
+                    font-weight: 400;
+                    font-size: 2vw;
+                }
+            }
+            .marcaProductoIndex{
+                font-family: $fuente-LEAGUE_SPARTAN;
+                font-weight: 600;
+                font-size: 2vw;
+                p{
+                    margin-top: 2vw;
+                }   
+            }
+            .precioProductoIndex{
+                font-family: $fuente-LEAGUE_SPARTAN;
+                font-weight: 300;
+                font-size: 2.5vw;
+                p{
+                    margin: 0;
+                } 
+            }
+        }
+        //Darle color distintos a cada uno de los nombres de los productos
+        $Colores: $colorAnaranjado, $colorVerde, $colorRosado;
+        @for $i from 1 through length($Colores) {
+            .cartaProductoIndex:nth-of-type(#{$i}) .nombreProductoIndex{
+                background-color: nth($Colores, $i);
+            }
+        }
+    }
 }
