@@ -338,3 +338,67 @@ header{
         }
     }
 }
+
+#previaAptos{
+    .subtituloIndex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2vw;
+        h2{
+            margin: 0;
+            font-family: $fuent-POPPINS;
+            font-size: 3vw;
+
+        }
+        h3{
+            margin: 0;
+            font-family: $fuent-POPPINS;
+            font-size: 2vw;
+            font-weight: 500;
+        }
+    }
+    .circulos{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 3vw 0;
+        gap: 1vw;
+        #ciruclosIzquierda, #circulosDerecha, #menuCirculosCentro{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5vw;
+        }
+        .rosado{
+            background-color: $colorRosado;
+        }
+        .anaranjado{
+            background-color: $colorAnaranjado;
+        }
+        .verde{
+            background-color: $colorVerde;
+        }
+        .circuloChico{
+            width: 3vw;
+            height: 3vw;
+            border-radius: 50%;
+        }
+        .circuloMediano{
+            width: 4vw;
+            height: 4vw;
+            border-radius: 50%;
+        }
+        .circuloGrande{
+            width: 5vw;
+            height: 5vw;
+            border-radius: 50%;
+        }
+        .circuloNormal{
+            width: 6vw;
+            height: 6vw;
+            border-radius: 50%;
+        }
+    }
+}
