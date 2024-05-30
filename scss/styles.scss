@@ -468,3 +468,71 @@ header{
         }
     }
 }
+
+#previaMontevideo{
+    background-color: #FFB672;
+    .SubtituloMontevideoIndex {
+        h2{
+            font-family: $fuent-POPPINS;
+            text-align: center;
+            font-size: 5vw;
+            color: white;
+            margin: 0 0 2vw 0;
+            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        }
+    }
+    .cartasMontevideoIndex{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+        justify-content: center;
+        padding-bottom: 3vw;
+        .cartaMontevideoIndex{
+            border-radius: 50% 50% 10% 10%;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5vw;
+            width: 28vw;
+            height: 20vw;
+            overflow: hidden;
+            .cartaImagenMontevideo {
+                display: flex;
+                justify-content: center;
+                height: 10vw;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .cartaInformacionMontevideo{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                p{
+                    text-align: center;
+                    padding: 0 1.5vw;
+                    margin: 0;
+                    font-size: 0.8vw;
+                    font-family: $fuente-LEAGUE_SPARTAN;
+                }
+                p:not(:first-child){
+                    margin-bottom: 1vw;
+                }
+                .cartaNombreMontevideo{
+                    font-family: $fuent-POPPINS;
+                    font-weight: 600;
+                    font-size: 2vw;
+                }
+                .cartaDescripcionMontevideo{
+                    font-weight: 400;
+                    font-size: 1.3vw;
+                }
+                .cartaHorarioMontevideo{
+                    margin-bottom: 1vw;
+                }
+            }
+        }
+    }
+}
