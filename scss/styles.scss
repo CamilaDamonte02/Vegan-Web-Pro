@@ -404,7 +404,7 @@ header{
     .productosIndex{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         padding: 0 2vw;
         .cartaProductoIndex{
@@ -451,6 +451,20 @@ header{
             .cartaProductoIndex:nth-of-type(#{$i}) .nombreProductoIndex{
                 background-color: nth($Colores, $i);
             }
+        }
+    }
+    .botonAptosIndex{
+        margin: 5vw;
+        display: flex;
+        justify-content: center;
+        button{
+            font-family: $fuent-POPPINS;
+            width: 80%;
+            font-size: 1.3vw;
+            height: 2.5vw;
+            border-radius: 30px;
+            border: none;
+            background-color: $colorVerde;
         }
     }
 }
