@@ -540,8 +540,8 @@ header{
                 display: none;
             }
             .cartaMontevideoIndex{
-                height: 32vw;
-                gap: 2vw;
+                height: 35vw;
+                width: 40vw;
                 .cartaImagenMontevideo{
                     height: 15vw;
                 }
@@ -549,14 +549,14 @@ header{
                     p{
                         text-align: center;
                         padding: 0 1.5vw;
-                        font-size: 1.5vw;
+                        font-size: 2vw;
                         font-family: $fuente-LEAGUE_SPARTAN;
                     }
                     .cartaNombreMontevideo{
                         font-size: 2.5vw;
                     }
                     .cartaDescripcionMontevideo{
-                        font-size: 1.8vw;
+                        font-size: 2.5vw;
                     }
                 }
             }
