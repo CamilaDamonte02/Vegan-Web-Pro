@@ -479,7 +479,7 @@ header{
             font-size: 5vw;
             color: white;
             margin: 0 0 2vw 0;
-            text-shadow: 1px 1px 2px rgb(0, 0, 0);
+            text-shadow: 1px 1px 2px gray;
         }
     }
     .cartasMontevideoIndex{
@@ -560,6 +560,21 @@ header{
                     }
                 }
             }
+        }
+    }
+    .botonMontevideoIndex{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20vw;
+        padding: 2vw 0 5vw 0;
+        button{
+            border: none;
+            box-shadow: 1px 1px 2px gray;;
+            border-radius: 25px;
+            width: 80%;
+            font-family: $fuent-POPPINS;
+            background-color: white;
+            font-size: 1.3vw;
         }
     }
 }
