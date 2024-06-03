@@ -25,6 +25,22 @@ body{
     padding: 0;
 }
 
+.boton{
+    display: flex;
+    justify-content: center;
+    button{
+        border-radius: 25px;
+        width: 80%;
+        height: 3vw;
+        font-family: $fuent-POPPINS;
+        font-size: 1.5vw;
+        @media (max-width: 768px) {
+            height: 4vw;
+            font-size: 2.5vw;
+        }
+    }
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -123,17 +139,7 @@ header{
         button{
             border: none;
             background: white;
-            border-radius: 30px;
             width: 70%;
-            font-size: 1.5vw;
-            height: 3vw;
-            font-family: $fuent-POPPINS;
-            @media (max-width: 768px) {
-                font-size: 2.5vw;
-            }
-            @media (max-width: 320px) {
-                font-size: 3vw;
-            }
         }
         @media (max-width: 768px) {
             display: flex;
@@ -457,14 +463,7 @@ header{
     }
     .botonAptosIndex{
         margin: 5vw;
-        display: flex;
-        justify-content: center;
         button{
-            font-family: $fuent-POPPINS;
-            width: 80%;
-            font-size: 1.5vw;
-            height: 3vw;
-            border-radius: 30px;
             border: none;
             background-color: $colorVerde;
         }
@@ -564,19 +563,11 @@ header{
         }
     }
     .botonMontevideoIndex{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20vw;
-        padding: 2vw 0 5vw 0;
+        padding: 2vw 0 2vw 0;
         button{
             border: none;
-            box-shadow: 1px 1px 2px gray;;
-            border-radius: 25px;
-            width: 80%;
-            height: 3vw;
-            font-family: $fuent-POPPINS;
+            box-shadow: 1px 1px 2px gray;
             background-color: white;
-            font-size: 1.5vw;
         }
     }
     @media (max-width: 768px) {
@@ -584,6 +575,75 @@ header{
             h2{
                 font-size: 6.5vw;
             }
+        }
+    }
+}
+
+#previaBlog {
+    padding-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+    padding-bottom: 5vw;
+    .subtituloResaltadorBlogIndex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        img{
+            height: 7vw;
+        }
+        .subtituloBlogIndex{
+            position: absolute;
+            h2{
+                font-family: $fuent-POPPINS;
+                font-size: 5vw;
+            }
+        }
+    }
+    .cartasBlogIndex{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+        padding: 0 2vw;
+        .cartaBlogIndex{
+            border: black 1px solid;
+            padding: 1vw;
+            background: white;
+            .imagenCartaBlogIndex{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 20vw;
+                    height: auto;
+                }
+            }
+            .tituloCartaBlogIndex{
+                background-color: $colorAnaranjado;
+                p{
+                    color: white;
+                    text-shadow: 1px 1px 2px gray; 
+                    font-family: $fuent-POPPINS;
+                    text-align: center;
+                    font-size: 2vw;
+                    font-weight: 500;
+                }
+            }
+            .infoAdicionalCartaBlogIndex{
+                p{
+                    font-family: $fuente-LEAGUE_SPARTAN;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .botonBlogIndex{
+        button{
+            border: none;
+            background-color: $colorRosado;
         }
     }
 }
