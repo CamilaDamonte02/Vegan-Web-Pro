@@ -741,35 +741,45 @@ header{
                     margin: 1vw;
                 }
             }
-            .grillaContenedorDia{
+            .grillaContenedorDia {
                 background-color: rgb(216, 216, 216);
                 display: flex;
                 flex-direction: row;
-                align-items: center;
+                align-items: center; 
                 border-radius: 25px;
                 justify-content: left;
-                padding: 1vw;
+                padding: 1vw 2vw;
                 gap: 1vw;
-                .grillaContenedorComida{
+                height: 20vw;
+                overflow-x: auto;
+                overflow-y: hidden;
+                .grillaContenedorComida {
                     display: flex;
                     flex-direction: column;
                     background-color: white;
                     padding: 1vw;
                     border-radius: 25px;
                     gap: 1vw;
-                    .contenedorComidaFoto img{
-                        width: 20vw;
-                        height: auto;
+                    height: 90%;
+                    width: 15vw;
+                    .contenedorComidaFoto{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                        width: 90%; 
+                        height: auto; 
                         border-radius: 25px;
                     }
-                    .contenedorComidaTitulo{
+                    }
+                    .contenedorComidaTitulo {
                         background-color: $colorVerde;
                         border-radius: 25px;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         width: 100%;
-                        p{
+                        p {
                             padding: 0;
                             margin: 0;
                             font-family: $fuente-LEAGUE_SPARTAN;
@@ -777,7 +787,7 @@ header{
                             font-weight: 500;
                         }
                     }
-                    .contenedorComidaNombre{
+                    .contenedorComidaNombre {
                         margin: 0 auto;
                         a{
                             font-size: 2vw;
@@ -785,33 +795,43 @@ header{
                         }
                     }
                 }
-                .grillaContenedorSnack{
+                .grillaContenedorSnack {
                     background-color: $colorVerdeOscuro;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    padding: 2vw 1vw;
+                    padding: 1vw 1vw;
                     border-radius: 25px;
-                    gap: 1vw;
-                    .contenedorSnackTitulo{
-                        p{
-                            text-align: center;
-                            color: white;
-                            font-family: $fuente-LEAGUE_SPARTAN;
-                            font-size: 2.5vw;
-                            line-height: 2.5vw;
-                            padding: 0;
-                            margin: 0;
+                    gap: 1vw;   
+                    width: 4vw;
+                    height: 90%;
+                    .contenedorSnackTitulo p {
+                        text-align: center;
+                        color: white;
+                        font-family: $fuente-LEAGUE_SPARTAN;
+                        font-size: 2.5vw;
+                        line-height: 2.5vw;
+                        padding: 0;
+                        margin: 0;
+                    }
+                    .contenedorSnackImagen {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        img {
+                            width: 100%;
+                            height: auto; 
+                            border-radius: 25px;
                         }
-                    }
-                    .contenedorSnackImagen img{
-                        width: 3vw;
-                        height: auto;
-                    }
+                    }    
                 }
             }
         }
+    }
+    .previaPlannerSemanal-boton{
+        padding: 5vw 0 10vw 0;
     }
 }
